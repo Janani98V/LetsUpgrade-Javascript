@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Assignment1-Question1</title>
+</head> 
+<body>
+	<h1>To display current day and time in given format</h1>
+	<p id="day"></p>
+	<p id="time"></p> 
+	<script type="text/javascript">
+		var time = new Date().toLocaleTimeString().split(':');
+		var print=time[0]+" PM : "+time[1]+" : "+time[2].split(' ')[0]; 
+
+		var d = new Date().getDay();
+  		var day=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+		document.getElementById('day').innerHTML = "Today is : "+day[d]+".";
+		document.getElementById('time').innerHTML = "Current time is : "+print;
+
+	</script>
+</body>
+</html>

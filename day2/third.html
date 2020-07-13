@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment1-Question3</title>
+</head>
+<body>
+
+<h1>To get current date in different formats</h1>
+<p id="dateFormats"></p>
+
+<script>
+function twodigit(num)
+{
+if(num<10)
+	return "0"+num;
+else
+	return num;
+}
+  var d = new Date().toLocaleDateString().split("/");
+  var mm=twodigit(d[0]);
+  var dd=twodigit(d[1]);
+  var yyyy=twodigit(d[2]); 
+  var format1=mm+"-"+dd+"-"+yyyy;
+  var format2=mm+"/"+dd+"/"+yyyy;
+  var format3=dd+"-"+mm+"-"+yyyy;
+  var format4=dd+"/"+mm+"/"+yyyy;
+  document.getElementById("dateFormats").innerHTML = format1+", "+format2+", "+format3+", "+format4;
+
+</script>
+
+</body>
+</html>
