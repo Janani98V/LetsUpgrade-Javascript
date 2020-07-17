@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment3-Question3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let marks=prompt('Enter your marks');  
+
+		console.log("Condition statements:");
+		if (marks>=90)
+			console.log("Marks are "+marks+" and grade is O");
+		else if(marks>=80 && marks<90)
+			console.log("Marks are "+marks+" and grade is A+");
+		else if(marks>=70 && marks<80)
+			console.log("Marks are "+marks+" and grade is A"); 
+		else if(marks>=60 && marks<70)
+			console.log("Marks are "+marks+" and grade is B+");
+		else if(marks>=50 && marks<60)
+			console.log("Marks are "+marks+" and grade is B");
+		else
+			console.log("Marks are "+marks+" and grade is F"); 
+
+		console.log("Switch statement"); 
+		switch(true){
+		case marks>=90:
+			console.log("Marks are "+marks+" and grade is O");
+			break;
+		case (marks>=80 && marks<90):
+			console.log("Marks are "+marks+" and grade is A+");
+			break;
+		case (marks>=70 && marks<80):
+			console.log("Marks are "+marks+" and grade is A"); 
+			break;
+		case (marks>=60 && marks<70):
+			console.log("Marks are "+marks+" and grade is B+");
+			break;
+		case (marks>=50 && marks<60):
+			console.log("Marks are "+marks+" and grade is B");
+			break;
+		default:
+			console.log("Marks are "+marks+" and grade is F"); 
+		} 
+
+		console.log("ternary statement");
+		console.log((marks>=90)?"Marks are "+marks+" and grade is O":
+					(marks>=80 && marks<90)?"Marks are "+marks+" and grade is A+":
+					(marks>=70 && marks<80)?"Marks are "+marks+" and grade is A":
+					(marks>=60 && marks<70)?"Marks are "+marks+" and grade is B+":
+					(marks>=50 && marks<60)?"Marks are "+marks+" and grade is B":
+					"Marks are "+marks+" and grade is F"
+					);
+	</script>
+</body>
+</html>
