@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let sales=prompt("Enter the annual sales made by the employee");
+		let commission;
+		switch(true)
+		{
+			case (sales>=0 && sales<=5000):
+				commission=2;
+				break;
+			case (sales>=5001 && sales<=10000):
+				commission=5;
+				break;
+			case (sales>=10001 && sales<=20000):
+				commission=7;
+				break;
+			case (sales>20000):
+				commission=10;
+				break;
+		} 
+		let commissionAmount=commission/100*sales;
+		console.log(`Total commission earned by him is ${commissionAmount.toFixed(3)}`);
+	</script>
+</body>
+</html>

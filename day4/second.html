@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question2</title>
+</head>
+<body>
+	<script type="text/javascript"> 
+		console.log("Destrucuring the object:");
+		const student={
+			name:"Helsinki",
+			age:24,
+			projects:{
+				diceGame: "Two players dice game using javascript"
+			}
+		} 
+		const{name,age,projects:{diceGame}}= student; //destructuring
+		console.log(name+" is a "+age+" years old student. His project 'DiceGame' is a "+diceGame);
+	</script>
+</body>
+</html>

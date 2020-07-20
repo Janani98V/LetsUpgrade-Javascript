@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question6</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//rewriting this using ? and ||
+		function call()
+		{
+			var input=prompt('Enter a number greater than 100 or enter an empty line to exit');
+			(input>100 || input=="" ||input==null)? {} :call();
+		}
+		call();
+	</script>
+</body>
+</html>

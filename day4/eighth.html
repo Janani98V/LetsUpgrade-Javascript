@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question8</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let ask=(question,yes,no)=>{
+			(confirm(question))?yes():no()
+		} 
+		ask("Do you agree?",
+			function(){ alert("you agreed.");},
+			function(){ alert("you cancelled the execution.");}
+			);
+	</script>
+</body>
+</html>

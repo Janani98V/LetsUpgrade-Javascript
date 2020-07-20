@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question7</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let input=prompt("Enter n value"); 
+		
+		for(let i=2;i<=input;i++)
+		{
+			let prime=1;
+			for(let j=2;j<i;j++)
+			{
+				if(i%j==0)
+					{prime=0;
+					break;}
+			} 
+			if(prime)
+			{
+				console.log(i);
+			} 
+
+		}
+		
+	</script>
+</body>
+</html>

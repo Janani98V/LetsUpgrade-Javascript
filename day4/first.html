@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4-Question1</title>
+</head>
+<body> 
+	<h1>fizz buzz</h1>
+	<script type="text/javascript">
+		for(let i=1;i<=100;i++)
+		{
+			let string=i;
+			if(i%3==0 && i%5==0)
+				string+=" fizzbuzz"; 
+			else if(i%3==0 && i%5!=0)
+				string+=" fizz";
+			else if(i%5==0 && i%3!=0)
+				string+=" buzz";
+			document.write(string+"<br>");
+		}
+	</script>
+</body>
+</html>
