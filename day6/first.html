@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment6-Question1</title>
+<style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+</style>
+</head>
+<body>
+<div class="center">
+  <button  onclick="change()">Click to change background color</button> 
+</div>
+<script>
+function change() {
+  //array of colors
+  var colors=['black','gray','brown','red','orange','yellow','green','cyan','blue'];
+  var index = 0; 
+  //calling frame function at an interval of every 5 seconds to change bgcolor
+  var id = setInterval(frame, 5000);
+  function frame() {
+    if (index == 9) {
+      index=0;
+    } else {
+      document.body.style.backgroundColor=colors[index];
+      index++; 
+    }
+  }
+}
+</script>
+</body>
+</html>

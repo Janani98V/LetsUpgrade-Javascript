@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment6-Question3</title>
+</head>
+<style>
+.center {
+	text-align: center;
+}
+.col{
+	background-color: black;
+	color: white;
+}
+</style>
+<body>
+	<div id='center'>
+		<p id='welcome'></p> 
+		<p id='clock'></p> 
+		<button id='dark' onclick="changeTheme()">Dark theme</button>
+	</div>
+	<script type="text/javascript">
+		var input=prompt("Enter your username"); 
+		var div=document.getElementById('center');
+		var para=document.getElementById('welcome');
+		var timer=document.getElementById('clock');
+		var theme=document.getElementById('dark');
+		para.innerHTML="Welcome "+input+"!" ;
+		div.classList.add("center"); 
+		setInterval(()=>timer.innerHTML=new Date(),1000); 
+		function changeTheme()
+		{
+			if(theme.innerHTML=="Dark theme")
+			{
+				theme.innerHTML="Light theme";
+				document.body.classList.toggle("col");
+			}
+			else
+			{				
+				theme.innerHTML="Dark theme";
+				document.body.classList.toggle("col");
+			}
+		}
+	</script>
+</body>
+</html>

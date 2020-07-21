@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment6-Question2</title> 
+	<style type="text/css">
+		table, tr,th {
+  border: 1px solid black;
+  
+} 
+	</style>
+</head>
+<body> 
+<!-- 	creating a table to display the multiplication tables -->
+	<table id="table"  style="width:100%">
+		<th id="elmt">Multiplication table of </th>
+	</table>
+	<!-- printing multiplication table for user input -->
+	<script type="text/javascript">
+		let input=prompt("Enter a number");
+		document.getElementById('elmt').innerHTML+= input; 
+		//creating and appending tr tags with multiplications to the table
+		var table=document.getElementById('table'); 
+		for(let i=1;i<=20;i++)
+		{
+			let tr=document.createElement('tr'); 
+			tr.innerHTML= input+" X "+i+" = "+input*i;
+			table.appendChild(tr); 
+			let br=document.createElement('br'); 
+			table.appendChild(br); 
+		}
+	</script>
+</body>
+</html>
