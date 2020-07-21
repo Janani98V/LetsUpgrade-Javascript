@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment5-Question1</title>
+</head>
+<body>
+<script type="text/javascript">
+	//1) Taking a positive no.from user
+	let input=prompt('Enter a positive no.');
+	//2) Making an array of numbers till the'input' value 
+	let arr=[];
+	for(let i=0;i<=input;i++)
+	{
+		arr[i]=i;
+	} 
+	console.log(arr); 
+	//3) Using higher order functions to filter odd numbers
+	let odd=arr.filter(e=>e%2!=0);
+	console.log(odd); 
+	//4) Generating an array of cubes of the filtered numbers
+	let cubes=odd.map(e=>e**3);
+	console.log(cubes); 
+</script>
+</body>
+</html>

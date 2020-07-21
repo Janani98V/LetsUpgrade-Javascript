@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment5-Question2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Creating a class User with properties name,age and email. 
+		console.log('class User with properties name,age and email');
+		class User{
+			constructor(name,age,email)
+			{
+				this.name=name;
+				this.age=age;
+				this.email=email; 
+				this.coins=0;
+				this.courses=[];
+			}
+			//logina and logout functionalities
+			login()
+			{
+				console.log(`${this.name} has logged in`);
+			}
+			logout()
+			{
+				console.log(`${this.name} has logged out`);
+			}
+		} 
+		let user1=new User('Janani',22,'vjanani@student.tce.edu'); 
+		user1.login();
+		user1.logout();
+		//class Moderator with all the features of User and functionalities addCoins & removeCoins 
+		console.log('class Moderator with all the features of User and functionalities addCoins & removeCoins ');
+		class Moderator extends User{
+			constructor(name,age,email)
+			{
+				super(name,age,email); 
+			} 
+			addCoins(user)
+			{
+				user.coins=user.coins+1;
+				console.log(`${this.name} has added a coin to ${user.name}'s account. Now, ${user.name} has ${user.coins} coins`);
+			}
+			removeCoins(user)
+			{
+				user.coins=user.coins-1;
+				console.log(`${this.name} has deducted a coin from ${user.name}'s account. Now, ${user.name} has ${user.coins} coins`);
+			}
+		}
+		let mod1=new Moderator('Madhu',21,'madhuranantham@moderator.tce.edu'); 
+		mod1.login(); 
+		mod1.addCoins(user1);
+		mod1.addCoins(user1);
+		mod1.addCoins(user1);
+		mod1.removeCoins(user1);
+		mod1.logout();  
+		//class Admin with all the features of Moderator and functionalities addCourse & deleteCourse 
+		console.log('class Admin with all the features of Moderator and functionalities addCourse & deleteCourse ');
+		class Admin extends Moderator{
+			constructor(name,age,email)
+			{
+				super(name,age,email);
+			} 
+			addCourse(user,course)
+			{
+				user.courses.push(course);
+				console.log(`${this.name} has added the course ${course} to ${user.name}'s course list`);
+				console.log(user.courses);
+			} 
+			deleteCourse(user,course)
+			{
+				user.courses=user.courses.filter(e=>e!=course);
+				console.log(`${this.name} has deleted the course ${course} from ${user.name}'s course list`);
+				console.log(user.courses);
+			}
+		} 
+		let admin1=new Admin('Prakash',20,'Prakash@admin.tce.edu');
+		admin1.login(); 
+		admin1.addCoins(user1);
+		admin1.removeCoins(user1); 
+		admin1.addCourse(user1,'Computer Networks');
+		admin1.addCourse(user1,'JavaScript');
+		admin1.addCourse(user1,'Python');
+		admin1.addCourse(user1,'Bloackchain');
+		admin1.addCourse(user1,'Java');
+		admin1.deleteCourse(user1,'Java');
+		admin1.logout();  
+	</script>
+</body>
+</html>
