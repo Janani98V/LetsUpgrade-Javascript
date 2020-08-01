@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TO-Do List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="todostyles.css">
+</head>
+<body>
+<ul>
+  <li><img class="icon" src="icon.png" alt="icon"></li>
+  <li><h4 style="margin:1;color:white;float: left;">To-Dodo</h4></li> 
+</ul> 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span> 
+    <input id="title" type="text" style="border: none; border-bottom: 2px solid;" name="title" placeholder="Title"/> 
+    <textarea id="desc" name="description" placeholder="Description"></textarea> 
+   <!--  <input id="datefield" type='date'/> -->
+    <button style="float: right; background-color: #0059b3; color: white;border:none;" id="save">
+    save</button> 
+    <button style="float: right; background-color: #0059b3; color: white;border:none; margin-right: 16px"
+     id="cancel">cancel</button> 
+  </div>
+
+</div> 
+
+<div class="list" id="cardlist" style="display:block;">
+<div class="card" id="create">
+  <div style="padding: 2px 10px;">
+  	<i class="fa fa-plus-circle" 
+  	style="font-size:46px;color:tomato;float: left;padding: 8px 0px">
+  	</i>
+  	<h4 style=" padding: 2px 50px;"><b>Create New To-Do</b></h4> 
+  </div>
+</div>  
+</div> 
+<script src="todo.js"></script>
+</body>
+</html> 
